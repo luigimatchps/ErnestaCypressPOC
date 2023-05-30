@@ -1,4 +1,14 @@
 {
     "Base" : "https://staging.ernestatech.com/",
-    "PLP" : "https://staging.ernestatech.com/collections/all-rugs"
+    "PLP" : "https://staging.ernestatech.com/collections/all-rugs",
+    "Support" : "https://staging.ernestatech.com/contact-us",
+    "AboutUs" : "https://staging.ernestatech.com/about-us",
+    "SizeGuide" : "https://staging.ernestatech.com/custom-rug-size-guide",
+    "MaterialsGuide" : "https://staging.ernestatech.com/materials-guide",
+    "CareGuide" : "https://staging.ernestatech.com/care-guide",
+    "TradeProgram" : "https://staging.ernestatech.com/trade-program",
+    "BetaLaunch" : "https://staging.ernestatech.com/beta-launch",
+    "TermsOfUse" : "https://staging.ernestatech.com/terms-of-use",
+    "PrivacyPolicy" : "https://staging.ernestatech.com/privacy-policy",
+    "LimitedWarranty" : "https://staging.ernestatech.com/limited-warranty"
 }
