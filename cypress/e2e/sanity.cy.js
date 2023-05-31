@@ -67,42 +67,49 @@ describe("Navigate to Ernesta's Pages through clicking the links in the footer",
   it('Beta Launch', () => {
     cy.visit(urls.Base)
     FooterPage.clickBetaLaunchLink()
+    cy.wait(1000)
     cy.title().should('eq', 'Welcome to Beta | Ernesta');
   })
 
   it('Get in touch', () => {
     cy.visit(urls.Base)
     FooterPage.clickGetInTouchLink()
+    cy.wait(1000)
     cy.title().should('eq', 'Get in touch | Ernesta');
   })
 
   it('Trade Program', () => {
     cy.visit(urls.Base)
     FooterPage.clickTradeProgramLink()
+    cy.wait(1000)
     cy.title().should('eq', 'Trade Program | Ernesta');
   })
 
   it('Care Guide', () => {
     cy.visit(urls.Base)
     FooterPage.clickCareGuideLink()
+    cy.wait(1000)
     cy.title().should('eq', 'Rug Care Guide | Ernesta');
   })
 
   it('Materials Guide', () => {
     cy.visit(urls.Base)
     FooterPage.clickMaterialsGuideLink()
+    cy.wait(1000)
     cy.title().should('eq', 'Rug Materials Guide: How to Choose the Right Rug | Ernesta');
   })
 
   it('Size Guide', () => {
     cy.visit(urls.Base)
     FooterPage.clickSizeGuideLink()
+    cy.wait(1000)
     cy.title().should('eq', 'Size Guide | Ernesta');
   })
 
   it('Why Ernesta', () => {
     cy.visit(urls.Base)
     FooterPage.clickWhyErnestaLink()
+    cy.wait(1000)
     cy.title().should('eq', 'Why Ernesta | Ernesta');
   })
 })
