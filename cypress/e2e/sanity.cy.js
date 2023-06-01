@@ -75,7 +75,7 @@ describe("Navigate to Ernesta's Pages through clicking the links in the footer",
     cy.visit(urls.Base)
     FooterPage.clickGetInTouchLink()
     cy.wait(1000)
-    cy.title().should('eq', 'Get in touch | Ernesta');
+    cy.title().should('eq', 'Support | Ernesta');
   })
 
   it('Trade Program', () => {
@@ -103,7 +103,7 @@ describe("Navigate to Ernesta's Pages through clicking the links in the footer",
     cy.visit(urls.Base)
     FooterPage.clickSizeGuideLink()
     cy.wait(1000)
-    cy.title().should('eq', 'Size Guide | Ernesta');
+    cy.title().should('eq', 'Custom Rug Sizing Guide | Ernesta');
   })
 
   it('Why Ernesta', () => {
@@ -111,5 +111,26 @@ describe("Navigate to Ernesta's Pages through clicking the links in the footer",
     FooterPage.clickWhyErnestaLink()
     cy.wait(1000)
     cy.title().should('eq', 'Why Ernesta | Ernesta');
+  })
+
+  it('Terms of use', () => {
+    cy.visit(urls.Base)
+    FooterPage.clickTermsOfUseLink()
+    cy.wait(1000)
+    cy.title().should('eq', 'Terms of Use | Ernesta');
+  })
+
+  it('Privacy Policy', () => {
+    cy.visit(urls.Base)
+    FooterPage.clickPrivacyPolicyLink()
+    cy.wait(1000)
+    cy.title().should('eq', 'Privacy Policy | Ernesta');
+  })
+
+  it('Limited Warranty', () => {
+    cy.visit(urls.Base)
+    FooterPage.clickLimitedWarrantyLink()
+    cy.wait(1000)
+    cy.title().should('eq', 'Limited Warranty | Ernesta');
   })
 })
