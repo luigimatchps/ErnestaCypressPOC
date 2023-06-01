@@ -1,5 +1,6 @@
 import urls from '../fixtures/urls.json';
 import FooterPage from '../pages/FooterPage';
+import ProductListingPage from '../pages/ProductListingPage';
 
 describe("Navigate to Ernesta's Pages URLS", () => { 
   it('Homepage', () => {
@@ -63,6 +64,7 @@ describe("Navigate to Ernesta's Pages URLS", () => {
   })
 
 })
+
 describe("Navigate to Ernesta's Pages through clicking the links in the footer", () => {
   it('Beta Launch', () => {
     cy.visit(urls.Base)
@@ -132,5 +134,24 @@ describe("Navigate to Ernesta's Pages through clicking the links in the footer",
     FooterPage.clickLimitedWarrantyLink()
     cy.wait(1000)
     cy.title().should('eq', 'Limited Warranty | Ernesta');
+  })
+})
+
+describe("Navigating to the PDP", () => {
+  it('Through the PLP clicking on the product card', () => {
+    cy.visit(urls.PLP)
+    ProductListingPage.clickOnProductCardName('Ames')
+    cy.wait(1000)
+    cy.title().should('eq', 'Ames | Plush Loop and Cut Wool Rug | Ernesta')
+  })
+
+  it('Through the PLP clicking on the product card after altering the product color', ()=> {
+    cy.visit(urls.PLP)
+    cy.wait(1000)
+    ProductListingPage.selectColorVariant('Ames', 'Stone')
+    cy.wait(1000)
+    ProductListingPage.clickOnProductCardName('Ames')
+    cy.wait(1000)
+    cy.url().should('include', 'Color=Stone')
   })
 })
